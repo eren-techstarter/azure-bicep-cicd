@@ -1,0 +1,20 @@
+name: CI/CD Pipeline (App Code Only)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Halil Code
+        uses: actions/checkout@v3
+
+      - name: Deploy Web App Code dkslfjlkas
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'app-cicd-lab-et312'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: '.'
