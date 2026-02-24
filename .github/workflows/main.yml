@@ -9,10 +9,10 @@ jobs:
   deploy-code:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Halil Code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Deploy Web App Code dkslfjlkas
+      - name: Deploy Web App Code
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'app-cicd-lab-et312'
